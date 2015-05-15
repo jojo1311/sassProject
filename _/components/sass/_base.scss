@@ -37,3 +37,20 @@ h3 {
 	line-height: 60%;
 	color: $orange;
 }
+
+a {
+	text-decoration: underline;
+	color: mediumgray;
+	&:hover {
+		color: $orange;
+	}
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.small {
+	font-size: 1rem;
+	color: $blue;
+}
