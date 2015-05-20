@@ -12,11 +12,13 @@ $large				: 75em;
 
 
 
-//Content
+//Content --------------------------------------
 .layout {
 	@include container;
 	padding: 3%;
 
+
+	//Primary -----------------------------------
 	.primary {
 	 	margin-top: .2em;
 		@include at-breakpoint($medium) {
@@ -43,6 +45,20 @@ $large				: 75em;
 		}//medium layout
 
 	}//primary
+
+	//Secondary ---------------------------------
+	.secondary {
+		@include at-breakpoint($medium){
+			@include span-columns(4 omega, 12);
+			font-size: 1.1rem;
+			h1 {
+				font-size: 1.8rem;
+				color: $orange;
+			}
+		}
+	}
+
+
 }//Content layout
 
 // Header -------------------------------------
@@ -52,6 +68,22 @@ header {
 		margin: 2.5%;
 		max-width: 500px;
 		margin-bottom: 0;
+	}
+
+	.hero {
+		width: 100%;
+		@include at-breakpoint($medium) {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 450px;
+			@include background(image-url('misc/helper.jpg'));
+			background-position: center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
 	}
 }
 
